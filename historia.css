@@ -1,0 +1,272 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+
+    font-family: 'Oswald', sans-serif;
+
+    background:
+    linear-gradient(
+        160deg,
+        #0F172A,
+        #1E293B,
+        #7F1D1D,
+        #F59E0B
+    );
+
+    color: white;
+
+    min-height: 100vh;
+}
+
+/* HERO */
+
+.hero{
+
+    height: 55vh;
+
+    background:
+    linear-gradient(
+        rgba(0,0,0,0.75),
+        rgba(0,0,0,0.75)
+    ),
+    url("images/historia-japon.jpg");
+
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    padding: 40px;
+}
+
+.hero-texto{
+
+    text-align: center;
+}
+
+.hero h1{
+
+    font-size: 80px;
+
+    color: #FACC15;
+
+    letter-spacing: 6px;
+
+    text-shadow: 5px 5px 20px black;
+}
+
+.hero p{
+
+    font-size: 28px;
+
+    margin-top: 15px;
+
+    color: #E5E7EB;
+}
+
+/* BOTON */
+
+.volver{
+
+    position: fixed;
+
+    top: 25px;
+    left: 25px;
+
+    z-index: 9999;
+
+    text-decoration: none;
+
+    background: #F59E0B;
+
+    color: black;
+
+    padding: 12px 25px;
+
+    border-radius: 14px;
+
+    font-size: 18px;
+
+    transition: 0.3s;
+}
+
+.volver:hover{
+
+    background: white;
+
+    transform: scale(1.05);
+}
+/* MAIN */
+
+main{
+
+    width: 90%;
+
+    max-width: 1300px;
+
+    margin: auto;
+
+    padding: 60px 0;
+
+    display: grid;
+
+    gap: 45px;
+}
+
+/* TARJETAS */
+
+.card{
+
+    position: relative;
+
+    overflow: hidden;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 35px;
+
+    padding: 35px;
+
+    border-radius: 30px;
+
+    background: rgba(255,255,255,0.08);
+
+    border: 2px solid rgba(255,255,255,0.12);
+
+    backdrop-filter: blur(10px);
+
+    transition: 0.5s;
+
+    box-shadow: 0 15px 30px rgba(0,0,0,0.4);
+}
+
+.card:hover{
+
+    transform: translateY(-10px);
+
+    border-color: #FACC15;
+
+    background: rgba(255,255,255,0.12);
+}
+
+/* NUEVO DISEÑO DE IMAGENES */
+
+.card img{
+
+    width: 340px;
+
+    height: 240px;
+
+    object-fit: cover;
+
+    border-radius: 25px;
+
+    border: 4px solid #FACC15;
+
+    transform: rotate(-2deg);
+
+    transition: 0.5s;
+
+    box-shadow:
+    0 10px 25px rgba(0,0,0,0.5),
+    0 0 20px rgba(250,204,21,0.3);
+}
+
+.card:hover img{
+
+    transform: rotate(2deg) scale(1.05);
+}
+
+/* TEXTO */
+
+.contenido{
+
+    flex: 1;
+}
+
+.contenido h2{
+
+    font-size: 44px;
+
+    color: #FACC15;
+
+    margin-bottom: 20px;
+}
+
+.contenido p{
+
+    font-size: 22px;
+
+    line-height: 1.8;
+
+    color: #F3F4F6;
+
+    margin-bottom: 15px;
+}
+
+/* EFECTO DECORATIVO */
+
+.card::before{
+
+    content: "";
+
+    position: absolute;
+
+    top: -50px;
+    right: -50px;
+
+    width: 180px;
+    height: 180px;
+
+    background: rgba(250,204,21,0.08);
+
+    border-radius: 50%;
+}
+
+/* RESPONSIVE */
+
+@media(max-width: 900px){
+
+    .card{
+
+        flex-direction: column;
+    }
+
+    .card img{
+
+        width: 100%;
+
+        height: 260px;
+    }
+
+    .hero h1{
+
+        font-size: 50px;
+    }
+
+    .hero p{
+
+        font-size: 22px;
+    }
+
+    .contenido h2{
+
+        font-size: 35px;
+    }
+
+    .contenido p{
+
+        font-size: 18px;
+    }
+
+}

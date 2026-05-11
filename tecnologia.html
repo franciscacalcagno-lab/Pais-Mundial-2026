@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Tecnología Japonesa</title>
+
+    <link rel="stylesheet" href="tecnologia.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <header class="hero">
+
+        <a href="index.html" class="volver">⬅ VOLVER</a>
+
+        <div class="overlay"></div>
+
+        <div class="hero-contenido">
+
+            <h1>TECNOLOGÍA JAPONESA</h1>
+
+            <p>
+                Japón es uno de los países más avanzados del mundo
+                gracias a sus innovaciones tecnológicas.
+            </p>
+
+        </div>
+
+    </header>
+
+    <section class="intro">
+
+        <h2>Japón y el Futuro</h2>
+
+        <p>
+            Japón es reconocido mundialmente por sus avances en robótica,
+            inteligencia artificial, transporte, videojuegos y electrónica.
+            El país combina creatividad, disciplina e innovación para crear
+            tecnologías que impactan a todo el mundo.
+        </p>
+
+    </section>
+
+    <main class="contenedor">
+
+        <!-- ROBOTS -->
+
+        <section class="card">
+
+            <div class="numero">01</div>
+
+            <img src="./imagenes/robotica.jpg" alt="Robot Japonés">
+
+            <div class="contenido">
+
+                <h2>Robótica Avanzada</h2>
+
+                <p>
+                    Japón es pionero en el desarrollo de robots inteligentes.
+                    Muchas empresas japonesas fabrican robots capaces de ayudar
+                    a personas mayores, trabajar en fábricas y realizar tareas
+                    complejas.
+                </p>
+
+                <p>
+                    Algunos robots incluso pueden reconocer emociones humanas,
+                    responder preguntas y mantener conversaciones.
+                </p>
+
+            </div>
+
+        </section>
+
+        <!-- TRENES -->
+
+        <section class="card reverse">
+
+            <div class="numero">02</div>
+
+            <img src="./imagenes/tren-bala.jpg" alt="Tren Bala">
+
+            <div class="contenido">
+
+                <h2>Trenes Bala</h2>
+
+                <p>
+                    Los famosos Shinkansen son considerados algunos de los
+                    trenes más rápidos y seguros del planeta.
+                </p>
+
+                <p>
+                    Gracias a su avanzada tecnología, millones de personas
+                    viajan diariamente a gran velocidad entre ciudades.
+                </p>
+
+            </div>
+
+        </section>
+
+        <!-- VIDEOJUEGOS -->
+
+        <section class="card">
+
+            <div class="numero">03</div>
+
+            <img src="./imagenes/videojuego.jpg" alt="Videojuegos">
+
+            <div class="contenido">
+
+                <h2>Industria Gamer</h2>
+
+                <p>
+                    Japón revolucionó el mundo de los videojuegos con empresas
+                    como Nintendo, Sony y Sega.
+                </p>
+
+                <p>
+                    Personajes como Mario, Sonic y Pokémon nacieron en Japón
+                    y se volvieron famosos mundialmente.
+                </p>
+
+            </div>
+
+        </section>
+
+        <!-- CELULARES -->
+
+        <section class="card reverse">
+
+            <div class="numero">04</div>
+
+            <img src="./imagenes/electronica.jpg" alt="Electrónica">
+
+            <div class="contenido">
+
+                <h2>Electrónica</h2>
+
+                <p>
+                    Japón lidera la producción de cámaras, televisores,
+                    computadoras y dispositivos electrónicos.
+                </p>
+
+                <p>
+                    Empresas japonesas como Sony, Panasonic y Toshiba son
+                    referentes internacionales de calidad e innovación.
+                </p>
+
+            </div>
+
+        </section>
+
+        <!-- IA -->
+
+        <section class="card">
+
+            <div class="numero">05</div>
+
+            <img src="./imagenes/IA.jpg" alt="Inteligencia Artificial">
+
+            <div class="contenido">
+
+                <h2>Inteligencia Artificial</h2>
+
+                <p>
+                    Japón está invirtiendo millones en inteligencia artificial
+                    para crear ciudades inteligentes y mejorar la vida cotidiana.
+                </p>
+
+                <p>
+                    Muchas empresas trabajan en asistentes virtuales, autos
+                    autónomos y tecnologías futuristas.
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+
+
+    <!-- CURSOR FUTURISTA -->
+
+    <div class="cursor"></div>
+
+    <script>
+
+    const cursor = document.querySelector(".cursor");
+
+    document.addEventListener("mousemove", (e) => {
+
+        cursor.style.left = e.clientX + "px";
+
+        cursor.style.top = e.clientY + "px";
+
+    });
+
+    </script>
+
+</body>
+
+</html>
