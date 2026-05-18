@@ -157,7 +157,19 @@ body {
 .punto:hover::after {
   opacity: 1;
 }
+.evento {
+  position: absolute;
+  top: 0;
+  transform: translateX(-50%);
+  text-align: center;
+  color: white;
+}
 
+.evento p {
+  margin-top: 50px;
+  font-size: 0.8rem;
+  color: #ccc;
+}
 /* ANIMACIONES */
 @keyframes pulse {
   0% { box-shadow: 0 0 20px #e60023; }
@@ -175,4 +187,29 @@ body {
   .card {
     width: 100%;
   }
+}
+.datos-clave {
+  margin-top: 80px;
+  text-align: center;
+}
+
+.titulo-seccion {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: #ff2e4d;
+}
+
+.dato {
+  background: rgba(255,255,255,0.05);
+  margin: 15px auto;
+  padding: 20px;
+  border-radius: 15px;
+  max-width: 600px;
+  border-left: 4px solid #e60023;
+  transition: 0.3s;
+}
+
+.dato:hover {
+  transform: translateX(10px);
+  box-shadow: 0 0 20px rgba(230,0,35,0.4);
 }
