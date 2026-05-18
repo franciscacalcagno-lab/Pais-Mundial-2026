@@ -170,6 +170,19 @@ body {
   font-size: 0.8rem;
   color: #ccc;
 }
+/* VISOR DE IMAGEN */
+.visor-imagen {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.visor-imagen img {
+  max-width: 90%;
+  border-radius: 15px;
+  display: none;
+  box-shadow: 0 0 25px rgba(230,0,35,0.5);
+  transition: 0.4s;
+}
 /* ANIMACIONES */
 @keyframes pulse {
   0% { box-shadow: 0 0 20px #e60023; }
