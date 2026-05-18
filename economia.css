@@ -1,0 +1,178 @@
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: black;
+}
+
+/* SECCIÓN */
+.japon-economia {
+  min-height: 100vh;
+  background: radial-gradient(circle at top, #1a1a1a, #000);
+  color: white;
+  padding: 80px 20px;
+  overflow: hidden;
+}
+
+/* HEADER */
+.header-japon {
+  text-align: center;
+  margin-bottom: 60px;
+  animation: fadeIn 1.5s ease;
+}
+
+.header-japon h2 {
+  font-size: 3rem;
+  letter-spacing: 4px;
+}
+
+.header-japon p {
+  color: #aaa;
+}
+
+/* CÍRCULO */
+.circulo {
+  width: 90px;
+  height: 90px;
+  background: #e60023;
+  border-radius: 50%;
+  margin: 0 auto 20px;
+  box-shadow: 0 0 50px #e60023;
+  animation: pulse 2s infinite;
+}
+
+/* CARDS */
+.contenedor-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  justify-content: center;
+}
+
+.card {
+  width: 230px;
+  padding: 25px;
+  border-radius: 20px;
+  backdrop-filter: blur(12px);
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255,255,255,0.1);
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(45deg, transparent, rgba(230,0,35,0.3), transparent);
+  transform: rotate(45deg);
+  top: -100%;
+  left: -100%;
+  transition: 0.5s;
+}
+
+.card:hover::before {
+  top: 100%;
+  left: 100%;
+}
+
+.card:hover {
+  transform: translateY(-15px) scale(1.05);
+  box-shadow: 0 0 25px #e60023, 0 0 50px #e60023;
+}
+
+.card h3 {
+  color: #ff2e4d;
+}
+
+/* SECTORES */
+.sectores {
+  margin-top: 80px;
+  text-align: center;
+}
+
+.titulo-seccion {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: #ff2e4d;
+}
+
+.sector {
+  background: rgba(255,255,255,0.05);
+  margin: 15px auto;
+  padding: 20px;
+  border-radius: 15px;
+  max-width: 600px;
+  border: 1px solid rgba(255,255,255,0.1);
+  transition: 0.3s;
+}
+
+.sector:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 20px rgba(230,0,35,0.4);
+}
+
+/* TIMELINE */
+.timeline-japon {
+  margin-top: 100px;
+  position: relative;
+  height: 100px;
+}
+
+.line {
+  position: absolute;
+  top: 50px;
+  width: 100%;
+  height: 2px;
+  background: #e60023;
+}
+
+.punto {
+  position: absolute;
+  top: 40px;
+  width: 20px;
+  height: 20px;
+  background: #e60023;
+  border-radius: 50%;
+  box-shadow: 0 0 15px #e60023;
+  cursor: pointer;
+}
+
+.punto:nth-child(2) { left: 10%; }
+.punto:nth-child(3) { left: 35%; }
+.punto:nth-child(4) { left: 60%; }
+.punto:nth-child(5) { left: 85%; }
+
+.punto::after {
+  content: attr(data-year);
+  position: absolute;
+  top: -30px;
+  left: -10px;
+  font-size: 0.8rem;
+  opacity: 0;
+  transition: 0.3s;
+}
+
+.punto:hover::after {
+  opacity: 1;
+}
+
+/* ANIMACIONES */
+@keyframes pulse {
+  0% { box-shadow: 0 0 20px #e60023; }
+  50% { box-shadow: 0 0 60px #e60023; }
+  100% { box-shadow: 0 0 20px #e60023; }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* RESPONSIVE */
+@media (max-width: 600px) {
+  .card {
+    width: 100%;
+  }
+}
